@@ -1,0 +1,81 @@
+{% extends 'navigation.html' %}
+
+{% block body %}
+
+<form class="row g-3 needs-validation" action='/signup' method="POST">
+ {% csrf_token %}
+  
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label">Username</label>
+    <div class="input-group has-validation">
+     
+      <input type="text" class="form-control" id="validationCustomUsername" name='uname' aria-describedby="inputGroupPrepend" required>
+      <div class="invalid-feedback">
+        Please choose a email.
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label">First Name</label>
+    <div class="input-group has-validation">
+     
+      <input type="text" class="form-control" id="validationCustomUsername" name='fname' aria-describedby="inputGroupPrepend" required>
+      <div class="invalid-feedback">
+        Please choose a email.
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label">Last Name</label>
+    <div class="input-group has-validation">
+     
+      <input type="text" class="form-control" id="validationCustomUsername" name='lname' aria-describedby="inputGroupPrepend" required>
+      <div class="invalid-feedback">
+        Please choose a email.
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label">Email</label>
+    <div class="input-group has-validation">
+      
+      <input type="email" class="form-control" name='email' id="validationCustomUsername" aria-describedby="inputGroupPrepend" required >
+      <div class="invalid-feedback">
+        Please choose a password.
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label">Password</label>
+    <div class="input-group has-validation">
+      
+      <input type="password" class="form-control" name='password' id="validationCustomUsername" aria-describedby="inputGroupPrepend" required >
+      <div class="invalid-feedback">
+        Please choose a password.
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label">Confirm-Password</label>
+    <div class="input-group has-validation">
+      
+      <input type="password" class="form-control" name='cpassword' id="validationCustomUsername" aria-describedby="inputGroupPrepend" required >
+      <div class="invalid-feedback">
+        Please choose a password.
+      </div>
+    </div>
+  </div>
+ 
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</form>
+
+
+
+
+
+
+
+{% endblock body %}
